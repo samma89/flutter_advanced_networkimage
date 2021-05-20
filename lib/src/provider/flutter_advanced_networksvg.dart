@@ -14,7 +14,7 @@ import 'package:flutter_advanced_networkimage/src/utils.dart';
 
 /// Fetches the given URL from the network, associating it with some options.
 class AdvancedNetworkSvg extends PictureProvider<AdvancedNetworkSvg> {
-  const AdvancedNetworkSvg(
+  AdvancedNetworkSvg(
     this.url,
     this.decoder, {
     this.scale: 1.0,
@@ -38,7 +38,8 @@ class AdvancedNetworkSvg extends PictureProvider<AdvancedNetworkSvg> {
         assert(useDiskCache != null),
         assert(retryLimit != null),
         assert(retryDuration != null),
-        assert(printError != null);
+        assert(printError != null),
+        super(colorFilter);
 
   /// The URL from which the image will be fetched.
   final String url;
